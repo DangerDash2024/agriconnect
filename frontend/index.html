@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriConnect - Welcome</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="auth-container">
+        <div class="auth-sidebar">
+            <div class="sidebar-content">
+                <h1>AgriConnect 🌱</h1>
+                <p>Connecting local farmers directly to consumers. Fair prices, fresher produce, stronger communities.</p>
+            </div>
+        </div>
+
+        <div class="auth-form-box">
+            
+            <div id="login-section" class="form-section">
+                <h2>Welcome Back</h2>
+                <p class="subtitle">Log in to access your marketplace dashboard</p>
+                
+                <form id="login-form">
+                    <div class="input-group">
+                        <label for="login-email">Email Address</label>
+                        <input type="email" id="login-email" required placeholder="name@example.com">
+                    </div>
+                    <div class="input-group password-group">
+                        <label for="login-password">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="login-password" required placeholder="••••••••">
+                            <span class="password-toggle" id="toggle-login-pass">Show</span>
+                        </div>
+                    </div>
+                    <button type="submit" class="btn-primary">Sign In</button>
+                </form>
+                <p class="toggle-text">Don't have an account? <a href="#" id="to-register">Create an account</a></p>
+            </div>
+
+            <div id="register-section" class="form-section hidden">
+                <h2>Create an Account</h2>
+                <p class="subtitle">Join AgriConnect as a farmer or customer today</p>
+                
+                <form id="register-form">
+                    <div class="input-group">
+                        <label for="reg-username">Full Name / Business Name</label>
+                        <input type="text" id="reg-username" required placeholder="John Doe">
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-email">Email Address</label>
+                        <input type="email" id="reg-email" required placeholder="farmer@example.com">
+                    </div>
+                    <div class="input-group password-group">
+                        <label for="reg-password">Password</label>
+                        <div class="password-wrapper">
+                            <input type="password" id="reg-password" required placeholder="Minimum 6 characters">
+                            <span class="password-toggle" id="toggle-reg-pass">Show</span>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <label for="reg-role">Account Type</label>
+                        <select id="reg-role">
+                            <option value="customer">Customer / Buyer</option>
+                            <option value="farmer">Farmer / Seller</option>
+                        </select>
+                    </div>
+                    <button type="submit" class="btn-primary">Register Account</button>
+                </form>
+                <p class="toggle-text">Already have an account? <a href="#" id="to-login">Log In</a></p>
+            </div>
+
+        </div>
+    </div>
+
+    <script src="auth.js"></script>
+</body>
+</html>

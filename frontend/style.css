@@ -1,0 +1,242 @@
+/* 🎨 AgriConnect Premium Design System */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-deep: #1b4332;   /* Deep Forest Green */
+    --primary-mid: #2d6a4f;    /* Emerald Accent Green */
+    --primary-light: #d8f3dc;  /* Soft Sage Mint */
+    --text-dark: #1c251f;      /* Charcoal Rich Black */
+    --text-muted: #64748b;     /* Slate Gray for Subtitles */
+    --bg-clean: #f8fafc;       /* Off-White Background */
+    --card-white: #ffffff;
+    --radius-lg: 16px;
+    --radius-md: 10px;
+    --shadow-sm: 0 4px 6px -1px rgb(0 0 0 / 0.05), 0 2px 4px -2px rgb(0 0 0 / 0.05);
+    --shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', sans-serif;
+}
+
+body {
+    background-color: var(--bg-clean);
+    color: var(--text-dark);
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow-x: hidden;
+}
+
+/* 🏢 Main Layout Container */
+.auth-container {
+    display: flex;
+    width: 100%;
+    max-width: 1200px;
+    height: 680px;
+    background: var(--card-white);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-xl);
+    overflow: hidden;
+    margin: 20px;
+}
+
+/* 🌿 Left Side Panel: Premium Visual Branding */
+.auth-sidebar {
+    flex: 1.1;
+    background: linear-gradient(135deg, rgba(27, 67, 50, 0.95), rgba(45, 106, 79, 0.85)), 
+                url('https://images.unsplash.com/photo-1500937386664-56d1dfef3854?q=80&w=1000') no-repeat center center;
+    background-size: cover;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 60px;
+    position: relative;
+    color: #ffffff;
+}
+
+.sidebar-content {
+    max-width: 440px;
+}
+
+.sidebar-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: -0.03em;
+}
+
+.sidebar-content p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: rgba(255, 255, 255, 0.85);
+    font-weight: 300;
+}
+
+/* 📥 Right Side Panel: Interactive Forms Space */
+.auth-form-box {
+    flex: 0.9;
+    padding: 60px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background: var(--card-white);
+    position: relative;
+}
+
+.form-section {
+    animation: fadeIn 0.4s ease-out;
+}
+
+.form-section h2 {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--primary-deep);
+    letter-spacing: -0.02em;
+    margin-bottom: 8px;
+}
+
+.subtitle {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+    margin-bottom: 35px;
+}
+
+/* 📋 Modern Input Layouts */
+.input-group {
+    margin-bottom: 22px;
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group label {
+    font-size: 0.85rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+    color: var(--text-dark);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.input-group input, 
+.input-group select {
+    padding: 14px 16px;
+    font-size: 1rem;
+    border: 1.5px solid #e2e8f0;
+    border-radius: var(--radius-md);
+    background-color: #f8fafc;
+    color: var(--text-dark);
+    outline: none;
+    transition: var(--transition-smooth);
+}
+
+.input-group input:focus, 
+.input-group select:focus {
+    border-color: var(--primary-mid);
+    background-color: #ffffff;
+    box-shadow: 0 0 0 4px rgba(45, 106, 79, 0.15);
+}
+
+/* 🔘 Interactive Buttons */
+.btn-primary {
+    width: 100%;
+    padding: 15px;
+    background-color: var(--primary-deep);
+    color: #ffffff;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: var(--transition-smooth);
+    margin-top: 10px;
+    box-shadow: var(--shadow-sm);
+}
+
+.btn-primary:hover {
+    background-color: var(--primary-mid);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(45, 106, 79, 0.2);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+/* 🔄 Switch Links */
+.toggle-text {
+    text-align: center;
+    margin-top: 25px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.toggle-text a {
+    color: var(--primary-mid);
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition-smooth);
+}
+
+.toggle-text a:hover {
+    color: var(--primary-deep);
+    text-decoration: underline;
+}
+
+/* 👁️ Display Toggles */
+.hidden {
+    display: none !important;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(8px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* 📱 Responsive Adjustments for Laptops/Tablets */
+@media (max-width: 900px) {
+    .auth-container {
+        flex-direction: column;
+        height: auto;
+        max-width: 500px;
+    }
+    .auth-sidebar {
+        padding: 40px;
+        text-align: center;
+    }
+    .auth-form-box {
+        padding: 40px 30px;
+    }
+    .sidebar-content h1 { font-size: 2.2rem; }
+}
+/* 👁️ Password Wrapper & Toggle Styling */
+.password-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.password-wrapper input {
+    width: 100%;
+    padding-right: 60px; /* Make space so text doesn't overlap the toggle button */
+}
+
+.password-toggle {
+    position: absolute;
+    right: 16px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--primary-mid);
+    cursor: pointer;
+    user-select: none;
+    transition: var(--transition-smooth);
+}
+
+.password-toggle:hover {
+    color: var(--primary-deep);
+}
